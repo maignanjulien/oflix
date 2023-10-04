@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page ajout test{% endblock %}
+
+{% block body %}
+<h1>Titre : {{ movie.title }}</h1>
+<a>Type : {{ movie.type }}</a>
+<a>Les genres : </a>
+<ul>
+    {% for genre in movie.genres %}
+        <li>Nom du genre : {{ genre.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

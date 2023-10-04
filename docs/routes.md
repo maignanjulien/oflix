@@ -25,3 +25,25 @@ Imaginons que nous ayons créé un fichier `HomeController.php` dans notre dossi
 <?php
 
 namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+// Doc Symfo : https://symfony.com/doc/current/routing.html#creating-routes
+use Symfony\Component\Routing\Annotation\Route;
+
+class HomeController
+{
+    /**
+     * Page d'accueil disant "Bonjour"
+     * 
+     * @Route("/")
+     *
+     * @return Reponse
+     */
+    public function index(): Response
+    {
+        // Symfony attend toujours un return de type Response
+        // C'est pourquoi un echo('Bonjour'); produirait une erreur
+        return new Response('Bonjour');
+    }
+}
+```

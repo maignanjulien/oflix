@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page ajout test{% endblock %}
+
+{% block body %}
+{% for movie in movies %}
+<a href="{{ path("show_test", {id : movie.id}) }}">Titre : {{ movie.title }}</a>
+<br>
+<a>Type : {{ movie.type }}</a>
+<br>
+
+{% endfor %}
+
+{% endblock %}
